@@ -1,6 +1,6 @@
 Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunately, he is not good at math. Can you help him find out how many cakes he could bake considering his recipes?
 
-Write a tests for the function `countCakes` that accepts an object `recipe` and an object of `available` ingredients. Function returns the maximum number of cakes that Pete can bake.
+Write a tests for the function `countCakes` that accepts a non-empty objects `recipe` and `available` of available ingredients. Function returns the maximum number of cakes that Pete can bake.
 
 For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects, can be considered as 0.
 
