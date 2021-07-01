@@ -14,7 +14,7 @@ describe(`Function 'countCakes':`, () => {
     expect(typeof countCakes(recipe, available)).toBe('number');
   });
 
-  it(`should return 0 
+  it(`should return 1
     when Pete has as many ingredients as the recipe requires`, () => {
     const recipe = {
       flour: 500,
@@ -53,7 +53,7 @@ describe(`Function 'countCakes':`, () => {
   });
 
   it(`should return the number of cakes
-    when Pete hasn more available ingredients than the recipe requires`, () => {
+    when Pete has more available ingredients than the recipe requires`, () => {
     const recipe = {
       flour: 500,
       eggs: 5,
