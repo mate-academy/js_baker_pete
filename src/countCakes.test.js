@@ -18,15 +18,15 @@ describe(`Function 'countCakes':`, () => {
       .toBe(2);
   });
 
-  it(`should return a number`, () => {
+  it(`should return 0 if there are not enough ingredients`, () => {
     expect(countCakes({
-      flour: 5, sugar: 2,
+      flour: 500, sugar: 200,
     },
     {
-      flour: 1200, sugar: 1200, eggs: 5, milk: 200,
+      flour: 120, sugar: 120, eggs: 5, milk: 20,
     })
     )
-      .toBe(240);
+      .toBe(0);
   });
 
   it(`should return the number of cakes 
