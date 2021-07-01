@@ -12,10 +12,7 @@ describe(`Function 'countCakes':`, () => {
   });
 
   it(`should return the number of cakes 
-    when Pete has as many ingredients as the recipe requires
-    input:
-    recipe = {flour: 500, sugar: 200, eggs: 1,}
-    available = {flour: 600, sugar: 1200, eggs: 5, milk: 200,}`, () => {
+    when Pete has as many ingredients as the recipe requires`, () => {
     const recipe = {
       flour: 500,
       sugar: 200,
@@ -38,10 +35,7 @@ describe(`Function 'countCakes':`, () => {
   });
 
   it(`should return 0
-    when Pete doesn't have enought ingredients as the recipe requires
-    input:
-    recipe = {apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100,}
-    available = {sugar: 500, flour: 2000, milk: 2000,};`, () => {
+    when Pete doesn't have enought ingredients as the recipe requires`, () => {
     const recipe = {
       apples: 3,
       flour: 300,
@@ -59,10 +53,7 @@ describe(`Function 'countCakes':`, () => {
   });
 
   it(`should return 1 if 
-    Pete has enought ingredients only for 1 recipe
-    input:
-    recipe  = {flour: 600, sugar: 300, milk: 200, oil: 200,}
-    available = {flour: 500, sugar: 299, milk: 50, oil: 200,}`, () => {
+    Pete has enough ingredients only for 1 cake`, () => {
     const recipe = {
       flour: 600,
       sugar: 300,
@@ -77,21 +68,5 @@ describe(`Function 'countCakes':`, () => {
     };
 
     expect(countCakes(recipe, available)).toBe(1);
-  });
-
-  it(`should return 0 if recipe or available objects are empty
-    input:
-    recipe  = {flour: 600, sugar: 300, milk: 200, oil: 200,}
-    available = {}`, () => {
-    const recipe = {
-      flour: 600,
-      sugar: 300,
-      milk: 200,
-      oil: 200,
-    };
-    const available = {
-    };
-
-    expect(countCakes(recipe, available)).toBe(0);
   });
 });
