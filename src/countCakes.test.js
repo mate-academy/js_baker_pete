@@ -11,11 +11,7 @@ describe(`Function 'countCakes':`, () => {
     expect(typeof countCakes()).toBe('number');
   });
 
-  it(`should return 0 if objects are empty`, () => {
-    expect(countCakes({}, {})).toBe(0);
-  });
-
-  it(`should return the number of cakes due to ingradients`, () => {
+  it(`should return the number of cakes due to ingredients`, () => {
     const recipe = {
       flour: 500,
       sugar: 200,
@@ -45,5 +41,39 @@ describe(`Function 'countCakes':`, () => {
     };
 
     expect(countCakes(recipe, available)).toBe(0);
+  });
+
+  it(`should return 0 if ingredients are just below the boundary`, () => {
+    const recipe = {
+      apples: 3,
+      sugar: 100,
+      flour: 300,
+      milk: 100,
+    };
+    const available = {
+      apples: 2,
+      sugar: 99,
+      flour: 299,
+      milk: 99,
+    };
+
+    expect(countCakes(recipe, available)).toBe(0);
+  });
+
+  it(`should return 1 if ingredients are just above the boundary`, () => {
+    const recipe = {
+      apples: 4,
+      sugar: 100,
+      flour: 300,
+      milk: 100,
+    };
+    const available = {
+      apples: 2,
+      sugar: 101,
+      flour: 301,
+      milk: 101,
+    };
+
+    expect(countCakes(recipe, available)).toBe(1);
   });
 });
