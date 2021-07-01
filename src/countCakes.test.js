@@ -29,8 +29,8 @@ describe(`Function 'countCakes':`, () => {
     expect(countCakes(recepi, available)).toBe(1);
   });
 
-  it(`should returns the maximum 
-  number of cakes that Pete can bake`, () => {
+  it(`should returns the maximum number of cakes
+  that Pete can bake`, () => {
     const recepi = {
       flour: 500,
       sugar: 200,
@@ -38,7 +38,7 @@ describe(`Function 'countCakes':`, () => {
     };
     const available = {
       flour: 2500,
-      sugar: 100,
+      sugar: 1000,
       eggs: 25,
     };
 
@@ -60,8 +60,8 @@ describe(`Function 'countCakes':`, () => {
     expect(countCakes(recepi, available)).toBe(0);
   });
 
-  it(`should return the maximum number of cakes 
-    when 'avalible' ingredient has more value then in 'recepi`, () => {
+  it(`should return the maximum number of cakes
+  when 'available' ingredient has more value then in 'recipe'`, () => {
     const recepi = {
       flour: 500,
       sugar: 200,
@@ -98,8 +98,8 @@ describe(`Function 'countCakes':`, () => {
   });
 
   it(`should return '0' 
-    when 'available' ingredient values less than 'recepi'
-    ingredient values`, () => {
+  when 'available' ingredient values less than
+  'recipe' ingredient values`, () => {
     const recepi = {
       flour: 500,
       sugar: 200,
