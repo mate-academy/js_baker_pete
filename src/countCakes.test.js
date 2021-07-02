@@ -80,25 +80,4 @@ describe(`Function 'countCakes':`, () => {
 
     expect(countCakes(rcp, ing)).toBe(0);
   });
-
-  it(`should return the type 'number' for ingredient values`, () => {
-    const rcp = {
-      flour: 300,
-      sugar: 150,
-      milk: 100,
-      oil: 100,
-    };
-    const ing = {
-      apples: 3,
-      sugar: 500,
-      flour: 2000,
-      milk: 2000,
-    };
-
-    for (const i in rcp) {
-      for (const j in rcp) {
-        expect(typeof countCakes(rcp[i], ing[j])).toBe('number');
-      }
-    }
-  });
 });
